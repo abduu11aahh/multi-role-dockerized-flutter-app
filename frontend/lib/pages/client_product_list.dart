@@ -26,11 +26,6 @@ class _ClientProductListState extends State<ClientProductList> {
         final List<dynamic> responseData = json.decode(response.body);
         setState(() {
           products = List<Map<String, dynamic>>.from(responseData);
-          products.forEach((product) {
-            if (product['price'] is String) {
-              product['price'] = double.tryParse(product['price']);
-            }
-          });
         });
       } else {
         print('Failed to load products: ${response.statusCode}');
@@ -73,9 +68,7 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String name = product['name'];
-    final double price = (product['price'] is String)
-        ? double.tryParse(product['price']) ?? 0.0
-        : product['price'];
+    final String price = product['price']; 
     final String description = product['description'];
     final String imageUrl = product['imageUrl'];
 
@@ -109,7 +102,7 @@ class ProductItem extends StatelessWidget {
                 ),
               ),
               Text(
-                '\$${price.toStringAsFixed(2)}',
+                '\$${price}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16.0,
