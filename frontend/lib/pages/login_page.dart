@@ -53,8 +53,6 @@ class _LoginPageState extends State<LoginPage> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Align(
                 alignment: Alignment.centerLeft,
@@ -80,7 +78,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 30.0),
               Container(
-                width: double.infinity,
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -90,7 +87,6 @@ class _LoginPageState extends State<LoginPage> {
                       color: Colors.black.withOpacity(0.2),
                       spreadRadius: 1,
                       blurRadius: 5,
-                      offset: const Offset(0, 2),
                     ),
                   ],
                 ),
