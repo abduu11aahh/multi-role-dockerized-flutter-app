@@ -63,8 +63,6 @@ class _SignupPageState extends State<SignupPage> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
                 alignment: Alignment.centerLeft,
@@ -90,7 +88,6 @@ class _SignupPageState extends State<SignupPage> {
               ),
               SizedBox(height: 30.0),
               Container(
-                width: double.infinity,
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -100,7 +97,6 @@ class _SignupPageState extends State<SignupPage> {
                       color: Colors.black.withOpacity(0.2),
                       spreadRadius: 1,
                       blurRadius: 5,
-                      offset: Offset(0, 2),
                     ),
                   ],
                 ),
